@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+{% endblock %}
+{% block body_attribs %}
+class = "overflow-hidden"
+style = "
+background-image: url('/static/background3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;"
+
+{% endblock %}
+{% block content %}
+<div class = "card" style = " width:30%; position:fixed; top:35%;  left:35%; padding:16px;">
+    <center>
+    <div class = "container-fluid">
+        <p style = "color: grey;" >Patient name</p>
+        <h4>{{name}}</h4>
+        <p style = "color: grey;" >Result</p>
+        <h4>{{prediction}}</h4>
+    </div>
+</center>
+</div>
+{% endblock %}
