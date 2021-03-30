@@ -3,5 +3,5 @@ This is a Supervised machine Learning project used to predict if a patient has a
 Install required packages by <br> 
 pip install -r requirements.txt
 <br> then<br> 
-python app.y
+python app.py
 
