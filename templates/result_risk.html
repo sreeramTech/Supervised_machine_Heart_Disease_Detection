@@ -1,0 +1,49 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+{% endblock %}
+{% block body_attribs %}
+class = "overflow-hidden"
+style = "
+background-image: url('/static/background3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;"
+
+{% endblock %}
+{% block content %}
+<div class = "card" style = " width:30%; position:fixed; top:15%;  left:35%; padding:16px;">
+  <h2 style="color:blue"><b>Test Report</b></h2>
+  <hr>
+   
+    <div class = "container-fluid">
+        <table>
+          <tr>
+            <td> <p style = "color: grey;" >Patient name: {{name}}        </p>
+            <td><p style = "color: grey;" >Date: {{tdate}}</p></td>
+          </tr>
+          <tr>
+            <td><p style = "color: grey;" >Gender: {{sex}}</p></td>
+            <td><p style = "color: grey;">Time: {{ttime}}</p></td>
+          </tr>
+          <tr>
+           <td><p style = "color: grey;" >Age: {{age}}</p></td>
+          </tr>
+        </table>
+        <hr>
+        
+       
+        <p style = "color: grey;" >Resting Blood Pressure: {{trestbps}}</p>
+        <p style = "color: grey;" >Serum Cholestrol: {{chol}}</p>
+        <p style = "color: grey;" >Maximum Heart Rate: {{thalach}}</p>
+        <p style = "color: grey;" >Type of Chest pain : {{cp}}</p>
+        
+        
+        
+        <hr>
+        
+        <p style = " text-align: right; color: grey;" > Result  <span style="color: red; font-size: 18px"><b>{{prediction}}</b></span></p>
+        
+    </div>
+
+</div>
+{% endblock %}
