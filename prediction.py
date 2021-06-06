@@ -28,6 +28,16 @@ def Prediction(data):
     knn_classifier.fit(X_train, Y_train)
     user_input = sc.transform(user_input)
     p = knn_classifier.predict(user_input)
+    #matrix = confusion_matrix(Y_test,knn_classifier.predict(X_test))
+    #tp = matrix[0][0]
+    #fp = matrix[0][1]
+    #fn = matrix[1][0]
+    #tn = matrix[1][1]
+    #accuracy = (tp + tn)/(tp + tn + fp + fn )
+    #print("True Positive:",tp)
+    #print("True Negative:",tn)
+    #print("False Positive:",fp)
+    #print("False Negative:",fn)
     
     return p
 
